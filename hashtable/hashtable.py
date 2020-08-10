@@ -113,10 +113,13 @@ class HashTable:
 
         Implement this.
         """
-        if self.table[self.hash_index(key)] is None:
-            return None
+        # if self.table[self.hash_index(key)] is None:
+        #     return None
 
-        return self.table[self.hash_index(key)]
+        # return self.table[self.hash_index(key)]
+
+        index = self.hash_index(key)
+        return self.table[index]
 
 
     def resize(self, new_capacity):
