@@ -1,6 +1,21 @@
 def word_count(s):
     # Your code here
 
+    ignore = '":;,.-+=/\\|[]{}()*^&'
+
+    for char in ignore:
+        s = s.replace(char, "").lower()
+
+    counts = dict()
+    words = s.split()
+
+    for word in words:
+        if word not in counts:
+            counts[word] = 1
+        else: 
+            counts[word] += 1    
+
+    return counts      
 
 
 if __name__ == "__main__":
